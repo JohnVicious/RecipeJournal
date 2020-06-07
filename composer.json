@@ -1,0 +1,12 @@
+{
+    "name": "johnk/recipe-journal",
+    "authors": [
+        {
+            "name": "JohnKlein985",
+            "email": "JohnKlein985@yahoo.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^4.1"
+    }
+}
