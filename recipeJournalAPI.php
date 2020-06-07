@@ -20,6 +20,7 @@ class recipeJournalAPI {
 		if($recipeTbl->execute()){
 			while($row = $recipeTbl->fetch()){
 				$r = array();
+				$r['ID'] = $row['ID'];
 				$r['Title'] = $row['Title'];
 				$r['Body'] = $row['Body'];
 				$r['ImageURL'] = $row['ImageURL'];
