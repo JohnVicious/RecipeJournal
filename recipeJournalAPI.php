@@ -18,13 +18,13 @@ class recipeJournalAPI {
 		$recipeTbl = $this->pdo->prepare("SELECT ID, RecipeData FROM recipes;");
 		
 		if($recipeTbl->execute()){
-			while($row = $recipeTbl->fetch()){
-				$row = json_decode($row,true);
+			while($row = $recipeTbl->fetch()){				
+				$recipeData = json_decode($row['RecipeData'],true);
 				$r = array();
 				$r['ID'] = $row['ID'];
-				$r['Title'] = $row['Title'];
-				$r['Body'] = $row['Body'];
-				$r['ImageURL'] = $row['ImageURL'];
+				$r['Title'] = $recipeData['Title'];
+				$r['Body'] = $recipeData['Body'];
+				$r['ImageURL'] = $recipeData['ImageURL'];
 				
 				$recipes[] = $r;
 			}
