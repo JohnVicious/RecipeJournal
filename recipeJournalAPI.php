@@ -24,7 +24,8 @@ class recipeJournalAPI {
 				$r['ID'] = $row['ID'];
 				$r['Title'] = $recipeData['title'];
 				$r['SubTitle'] = $recipeData['subTitle'];
-				$r['Image'] = "require('../../assets/recipeImages/" . $recipeData['image'] . "')";
+				// $r['Image'] = "require('../../assets/recipeImages/" . $recipeData['image'] . "')";
+				$r['Image'] = $recipeData['image'];
 				$r['Servings'] = $recipeData['servings'];
 				$r['Serves'] = $recipeData['serves'];
 				$r['PrepTime'] = $recipeData['prepTime'];
