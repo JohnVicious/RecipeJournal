@@ -22,9 +22,18 @@ class recipeJournalAPI {
 				$recipeData = json_decode($row['RecipeData'],true);
 				$r = array();
 				$r['ID'] = $row['ID'];
-				$r['Title'] = $recipeData['Title'];
-				$r['Body'] = $recipeData['Body'];
-				$r['ImageURL'] = $recipeData['ImageURL'];
+				$r['Title'] = $recipeData['title'];
+				$r['SubTitle'] = $recipeData['subTitle'];
+				$r['Image'] = $recipeData['image'];
+				$r['Servings'] = $recipeData['servings'];
+				$r['Serves'] = $recipeData['serves'];
+				$r['PrepTime'] = $recipeData['prepTime'];
+				$r['CookTime'] = $recipeData['cookTime'];
+				$r['Calories'] = $recipeData['calories'];
+				$r['Story'] = $recipeData['story'];
+				$r['Ingredients'] = $recipeData['ingredients'];
+				$r['Instructions'] = $recipeData['instructions'];
+				$r['Notes'] = $recipeData['notes'];				
 				
 				$recipes[] = $r;
 			}
