@@ -1,0 +1,3 @@
+[submodule "RecipeJournalApp"]
+	path = RecipeJournalApp
+	url = https://github.com/JohnVicious/RecipeJournalApp.git
